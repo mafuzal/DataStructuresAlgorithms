@@ -4,12 +4,19 @@ double myPow(double x, int n);
 void main()
 {
     printf("%f to the power of %d is %f \n", 2.0, 3, myPow(2, 3));
+    printf("%f to the power of %d is %f \n", 2.0, 2, myPow(2, 2));
     printf("%f to the power of %d is %f \n", 2.1, 3, myPow(2.1, 3));
-
+    printf("%f to the power of %d is %f \n", 2.0, -2, myPow(2, -2));
+    printf("%f to the power of %d is %f \n", 0.445, 0, myPow(0.445, 0));
 }
 
 double myPow(double x, int n)
 {
+    if (n == 0)
+        return 1;
+    if (x == 0)
+        return 0;
+
     double result = x;
     int temp = n;
     if (temp < 0)
@@ -17,13 +24,10 @@ double myPow(double x, int n)
         temp = temp * -1;
     }
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i < temp; i++)
     {
-        result += result;
-        printf("Answer: %f\n",result);
+        result *= x;
     }
-    
-
     if (n < 0)
     {
         result = 1 / result;
