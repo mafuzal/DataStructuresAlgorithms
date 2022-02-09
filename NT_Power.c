@@ -11,7 +11,7 @@ void main()
     
 
 }
-
+//To Try Fast Power Algorithm Recursive 
 double myPow(double x, int n)
 {
     if (n == 0)
