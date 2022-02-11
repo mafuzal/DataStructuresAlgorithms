@@ -8,30 +8,27 @@ void main()
     printf("%f to the power of %d is %f \n", 2.1, 3, myPow(2.1, 3));
     printf("%f to the power of %d is %f \n", 2.0, -2, myPow(2, -2));
     printf("%f to the power of %d is %f \n", 0.445, 0, myPow(0.445, 0));
-    
-
 }
-//To Try Fast Power Algorithm Recursive 
+// To Try Fast Power Algorithm Recursive
 double myPow(double x, int n)
 {
-    if (n == 0)
-        return 1;
-    if (x == 0)
-        return 0;
 
-    double result = x;
-    int temp = n;
-    if (temp < 0)
+    double y = 1;
+    long long N = n;
+    if (N < 0)
     {
-        temp = temp * -1;
-        x = 1/x;
+        x = 1 / x;
+        N = -N;
     }
 
-    for (int i = 1; i < temp; i++)
+    for (long long i = N; i > 0; i /= 2)
     {
-        result *= x;
+        if (i % 2 == 1)
+        {
+            y *= x;
+        }
+        x *= x;
     }
 
-    return result;
+    return y;
 }
-
