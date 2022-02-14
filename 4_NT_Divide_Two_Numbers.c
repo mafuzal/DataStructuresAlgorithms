@@ -10,7 +10,8 @@ int main()
     printf("Dividend:%d, Divisor:%d with calculated Quotient:%d\n",5, 2, divide(4,2));
     printf("Dividend:%d, Divisor:%d with calculated Quotient:%d\n",4, -2, divide(4,-2));
     printf("Dividend:%d, Divisor:%d with calculated Quotient:%d\n",-2147483648, -1, divide(-2147483648,-1));
-    printf("Dividend:%d, Divisor:%d with calculated Quotient:%d\n",100, -1, divide(-2147483648,-1));
+    printf("Dividend:%d, Divisor:%d with calculated Quotient:%d\n",100, -1, divide(100,-1));
+    printf("Dividend:%d, Divisor:%d with calculated Quotient:%d\n",-2, -1, divide(-2,-1));
     return 0;
 }
 
