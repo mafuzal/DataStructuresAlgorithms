@@ -1,8 +1,6 @@
 //Remove Elements 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-#include <limits.h>
 int removeElement(int* nums, int numsSize, int val);
 int main()
 {
