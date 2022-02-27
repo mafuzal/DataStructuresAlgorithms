@@ -27,13 +27,22 @@ int removeElement(int* nums, int numsSize, int val)
          
     }
     bool checker = true;
+    int saveCount = 0;
     for (int i = 0; i< count; i++)
     {
         for(int j = 0; j < count; j++)
         {
-
+            if (nums[i] == temp[j] )
+            {
+                checker = false;
+            }
+        }
+        if(checker = true)
+        {
+            save[saveCount++] = nums[i]; 
         }
 
+        return save;
     }
 
 
