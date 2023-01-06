@@ -17,3 +17,4 @@ class ArraysStrings(object):
         return len(s)    
 
 
+longestString = ArraysStrings()
