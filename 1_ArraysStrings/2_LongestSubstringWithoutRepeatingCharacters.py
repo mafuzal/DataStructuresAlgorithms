@@ -1,6 +1,7 @@
 """
 Arrays and Strings 
 Q2:Longest Substring Without Repeating Characters 
+Sliding Window Concept Used 
 """
 class ArraysStrings(object):  
     def lengthOfLongestSubstring(self, s):
@@ -8,13 +9,22 @@ class ArraysStrings(object):
         :type s: str
         :rtype: int
         """
-        resultString = []
-        for i in range(len(s)):
-            if s[i] in resultString:
-                continue
-            else: 
-                resultString.append(s[i])
-        return len(s)    
+        resultSubStringLength = 0
+        charSet = set()
+        leftPointer = 0
+        
+        for rightPointer in range(len(s)):
+            while(s[rightPointer] in charSet):
+                print('charSet.remove %s' %( s[rightPointer]))
+                charSet.remove(s[rightPointer])
+                print('leftPointer Before: %d' %(leftPointer))
+                leftPointer += 1
+                print('leftPointer After: %d' %(leftPointer))
+            charSet.add(s[rightPointer])
+            resultSubStringLength = max(resultSubStringLength, rightPointer - leftPointer + 1)
+            print('resultSubStringLength: %d' %(resultSubStringLength))
+        return resultSubStringLength
 
 
 longestString = ArraysStrings()
+print(longestString.lengthOfLongestSubstring('abcdabcbb'))
