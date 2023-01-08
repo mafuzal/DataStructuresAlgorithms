@@ -27,4 +27,4 @@ class ArraysStrings(object):
 
 
 longestString = ArraysStrings()
-print(longestString.lengthOfLongestSubstring('abcdabcbb'))
+print(longestString.lengthOfLongestSubstring('abcdabcbbdefghddasc'))
