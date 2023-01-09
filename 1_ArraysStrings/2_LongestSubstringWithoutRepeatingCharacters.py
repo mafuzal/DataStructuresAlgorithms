@@ -25,6 +25,6 @@ class ArraysStrings(object):
             print('resultSubStringLength: %d' %(resultSubStringLength))
         return resultSubStringLength
 
-
+# Main 
 longestString = ArraysStrings()
 print(longestString.lengthOfLongestSubstring('abcdabcbbdefghddasc'))
